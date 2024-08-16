@@ -1,0 +1,71 @@
+.formStyle {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.inputStyle {
+
+    width: 300px !important;
+    border: 1px solid black !important;
+    display: flex !important;
+    justify-content: center;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.input-group{
+
+    display: flex !important;
+    justify-content: center;
+}
+
+
+.btnStyle {
+
+    margin-left: 1em !important;
+
+}
+
+.containerJob {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+
+}
+
+.containerItems {
+
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 3em;
+}
+
+.itemStyle {
+
+    font-weight: 500;
+    font-style: italic;
+
+}
+
+.typeStyle {
+
+    border: 1px solid rgba(31, 199, 250, 0.603) !important;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 3em;
+   
+}
+
+.jobImage {
+
+    width: 100px;
+    border-radius: 10px;
+    position: relative;
+    top: 6px;
+
+}
