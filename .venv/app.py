@@ -43,22 +43,28 @@ def login():
 @app.route("/dashboard", methods=['GET','POST'])
 def dashboard():
  
+ myclient = pymongo.MongoClient("mongodb+srv://franzieyoogan2:admin357159@cluster0.guw8a4s.mongodb.net/")
+ mydb = myclient["jobs"]
+ mycol = mydb["jobs"]
+ 
  if(request.method == "POST"):
 
     search = request.form['search']
 
     if search:
-       myclient = pymongo.MongoClient("mongodb+srv://franzieyoogan2:admin357159@cluster0.guw8a4s.mongodb.net/")
-       mydb = myclient["jobs"]
-       mycol = mydb["jobs"]
+     
 
        for x in mycol.find({"area": search}):
         print(x)
+    
+        return render_template('dashboard.htm',x = x)
+ else:
 
 
-    return render_template('dashboard.htm',x = x)
- 
- return render_template('dashboard.htm') 
+    results = list(mycol.find().sort("name"))
+
+   
+ return render_template('dashboard.htm',results=results) 
 
 
 

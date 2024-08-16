@@ -74,7 +74,36 @@ rel="stylesheet"
 </div>
 
 </section>
+{% else %}
+
+{% for result in results %}
+<section class="containerJob">
+
+    <div class="containerItems">
+
+        <div>
+
+            <img class="jobImage" src="/static/images/job.jpeg" alt="">
+
+        </div>
+  
+   
+<div>
+<h1>{{result.area}}</h1> 
+<p class="itemStyle">Location: {{result.state}} <span class="salary"> Salary: {{result.salary}}</span>
+<span class="typeStyle">{{result.type}}</span>
+</p>
+
+</div>
+     
+</div>
+
+</section>
+{% endfor %}
+
+
 {% endif %}
+
 
 </body>
 </html>
