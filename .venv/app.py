@@ -20,7 +20,7 @@ def login():
 
         if email and password:
                 
-            myclient = pymongo.MongoClient("mongodb+srv://franzieyoogan2:admin357159@cluster0.guw8a4s.mongodb.net/")
+            myclient = pymongo.MongoClient("yourKluster")
             mydb = myclient["jobs"]
             mycol = mydb["users"]
 
@@ -43,7 +43,7 @@ def login():
 @app.route("/dashboard", methods=['GET','POST'])
 def dashboard():
  
- myclient = pymongo.MongoClient("mongodb+srv://franzieyoogan2:admin357159@cluster0.guw8a4s.mongodb.net/")
+ myclient = pymongo.MongoClient("yourKluster")
  mydb = myclient["jobs"]
  mycol = mydb["jobs"]
  
